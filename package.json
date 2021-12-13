@@ -16,7 +16,7 @@
     "web3": "^1.6.1"
   },
   "scripts": {
-    "predeploy": "npm ci && npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
