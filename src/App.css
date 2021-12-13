@@ -1,38 +1,103 @@
 .App {
-  text-align: center;
+  padding: 0px 30px;
+  max-width: 1200px;
+  margin: 0px auto;
+  box-sizing: border-box
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* MAIN CARDS WRAPPER START */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-card-wrapper,
+.main-card__inner-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.main-card-wrapper {
+  min-height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 5vh;
+}
+.main-card__inner-wrapper {
+  flex-flow: column;
+  background: linear-gradient(90deg, wheat 0%, #f5deb3cc 50%, #f5deb300 100%);
+  width: 100%;
+  padding: 100px 5vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-txt {
+  color: #404040;
+  font-size: 4em;
+  max-width: 350px;
+  line-height: 1em;
+  margin: 0px;
 }
+
+
+/* MAIN CARDS WRAPPER END */
+
+
+
+/* CARDS SECTION START */
+.cards-wrapper {
+  width: 100%;
+  margin: 100px auto;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+  box-sizing: border-box;
+}
+
+.cards-item {
+  max-width: 300px;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 30px;
+  box-sizing: border-box;
+  grid-gap: 10px;
+}
+
+.img-wrapper,
+.img-wrapper>img {
+  width: 100%;
+  height: 100%;
+}
+/* CARDS SECTION END */
+
+
+/* BUTTONS START */
+.main-mint-btn {
+  cursor: pointer;
+  border-radius: 7px;
+  padding: 7px 30px;
+  border: 2px solid #404040;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  max-width: 350px;
+  background-color: #82b8ca;
+}
+
+.main-mint-btn:disabled,
+.sm-mint-button:disabled {
+  opacity: .5;
+  background-color: #bdbdbd;
+}
+.sm-mint-button {
+  background-color: #fff;
+  padding: 5px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.main-mint-btn:hover,
+.sm-mint-button:hover {
+  background-color: #a2e5f4;
+  font-weight: bold;
+}
+
+/* BUTTONS END */
