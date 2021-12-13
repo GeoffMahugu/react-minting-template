@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-minting-template/static/css/main.567fdb31.chunk.css",
+    "main.js": "/react-minting-template/static/js/main.0728dfce.chunk.js",
+    "main.js.map": "/react-minting-template/static/js/main.0728dfce.chunk.js.map",
+    "runtime-main.js": "/react-minting-template/static/js/runtime-main.9f475481.js",
+    "runtime-main.js.map": "/react-minting-template/static/js/runtime-main.9f475481.js.map",
+    "static/js/2.4d2acd14.chunk.js": "/react-minting-template/static/js/2.4d2acd14.chunk.js",
+    "static/js/2.4d2acd14.chunk.js.map": "/react-minting-template/static/js/2.4d2acd14.chunk.js.map",
+    "static/js/3.e7c5d391.chunk.js": "/react-minting-template/static/js/3.e7c5d391.chunk.js",
+    "static/js/3.e7c5d391.chunk.js.map": "/react-minting-template/static/js/3.e7c5d391.chunk.js.map",
+    "index.html": "/react-minting-template/index.html",
+    "static/css/main.567fdb31.chunk.css.map": "/react-minting-template/static/css/main.567fdb31.chunk.css.map",
+    "static/js/2.4d2acd14.chunk.js.LICENSE.txt": "/react-minting-template/static/js/2.4d2acd14.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9f475481.js",
+    "static/js/2.4d2acd14.chunk.js",
+    "static/css/main.567fdb31.chunk.css",
+    "static/js/main.0728dfce.chunk.js"
+  ]
+}
