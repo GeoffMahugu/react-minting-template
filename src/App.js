@@ -1,6 +1,13 @@
 import './App.css';
+import { useState } from "react";
+import { useWeb3React } from "@web3-react/core";
+import { injected } from "./wallet/Connector";
+import web3 from "web3";
 
 function App() {
+  const [minting, setMinting] = useState(false);
+  const { active, account, library, activate, deactivate } = useWeb3React()
+
   // Main Banner Image
   const mainBgImage = "https://cdn.i-scmp.com/sites/default/files/styles/1200x800/public/d8/images/canvas/2021/12/03/b37a97d3-270c-4cdc-8c83-4ee735a686e8_95895212.jpg?itok=y0459xhc&v=1638533154";
  
@@ -26,6 +33,45 @@ function App() {
     { img: 'https://lh3.googleusercontent.com/Dk1bsZWYQ2LXJoy5r5qk4b-ov92adDlAPmH5Mt0rSantgkf781evSQXVB6Sck1D0Mq9kUFu1pHABMdx0gil4w7LFpHm-jE2mxeLo=w600' },
     { img: 'https://everipedia-storage.s3.amazonaws.com/GalleryMediaItem/lang_en/bored-ape-yatch-club/7D401B7B-DF32-4E58-80E1-3B767561C0FFjpeg.jpeg' },
   ]
+  async function connect() {
+    try {
+      await activate(injected);
+    } catch (ex) {
+      console.log(ex)
+    }
+  }
+  async function disconnect() {
+    try {
+      deactivate()
+    } catch (ex) {
+      console.log(ex)
+    }
+  }
+
+  async function mint() {
+    setMinting(true);
+    const myAccount = "0x391EC0c94451e924C76a2B1ffc08268823f094e5"; //Account to receive payment
+    const price = "0.01"; // This is the price in ETH
+
+    let obj = {
+      to: myAccount,
+      from: account,
+      value: web3.utils.toWei(price, "ether"), // Needs to be converted to Wei units
+      gas: 85000, // Eth ⛽ price
+      gasLimit: "100000"
+    };
+
+    await library.eth.sendTransaction(obj, async (e, tx) => {
+      if (e) {
+        alert(`Something went wrong! Try switching accounts - ${e}`);
+        console.log("ERROR->", e);
+        setMinting(false);
+      } else {
+        setMinting(false);
+      }
+    });
+  }
+
   return (
     <div className="App">
 
@@ -33,7 +79,10 @@ function App() {
       <div className="main-card-wrapper" style={{ backgroundImage: `url(${mainBgImage})` }}>
         <div className="main-card__inner-wrapper">
           <h1 className="header-txt">React Minting Website</h1>
-          <button className="main-mint-btn">Mint</button>
+          {(active) ?
+            <button type="button" disabled={minting} onClick={mint} className="main-mint-btn">{(minting) ? 'Waiting confirmation.' : 'Mint'}</button>
+            : <button type="button" onClick={connect} className="main-mint-btn">Connect Wallet To Mint</button>
+          }
         </div>
       </div>
 
@@ -45,7 +94,10 @@ function App() {
               <img src={ape.img} alt={`ape_${index}`} />
             </div>
             <div className="btn-wrapper">
-              <button type="button" className="sm-mint-button">Mint</button>
+              {(active) ?
+                <button type="button" disabled={minting} onClick={mint} className="sm-mint-button">{(minting) ? 'Waiting confirmation.' : 'Mint'}</button>
+                : <button type="button" onClick={connect} className="sm-mint-button">Connect Wallet To Mint</button>
+              }
             </div>
           </div>
         ))}
