@@ -40,6 +40,7 @@ function App() {
       console.log(ex)
     }
   }
+  // eslint-disable-next-line no-unused-vars
   async function disconnect() {
     try {
       deactivate()
