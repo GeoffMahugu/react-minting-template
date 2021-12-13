@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# REACT WEB3
+This project contains integration of react.js with web3 to enable blochain transactions on your frontend.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/17265995/145871300-5a85b109-466b-41d3-9937-5dff1391f0ff.gif)
 
 ## Available Scripts
 
