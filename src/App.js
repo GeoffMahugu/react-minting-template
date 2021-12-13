@@ -4,7 +4,7 @@ function App() {
   // Main Banner Image
   const mainBgImage = "https://cdn.i-scmp.com/sites/default/files/styles/1200x800/public/d8/images/canvas/2021/12/03/b37a97d3-270c-4cdc-8c83-4ee735a686e8_95895212.jpg?itok=y0459xhc&v=1638533154";
  
-  // ApesImage Data
+  // Apes Image Data
   const apes = [
     { img: 'https://lh3.googleusercontent.com/F3twbu2BQbach9qBnzZaaTTSdD9p3elhyiyRCGVesqxvZecr5w_d4v3AdM3pmfIfYiozTY_6AsxFhVj1eRNb7VBKi_J1hLZJVPkVYw=w1400-k' },
     { img: 'https://lh3.googleusercontent.com/ZeVN3mXbx0ToUNLm4tGEOPlTsVW8ClMWBXcYzZwIqK2dNs9pzuCl-oZH1_I0-1AJw6AL0ZgWE2xVf_81c8Yw6lWLkkCMYgBZvC-9Fg=w1400-k' },
