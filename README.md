@@ -1,5 +1,5 @@
 # REACT WEB3
-This project contains integration of react.js with web3 to enable blochain transactions on your frontend.
+This project contains integration of react.js with web3 to enable blockchain transactions on your frontend.
 
 [Demo Link](https://geoffmahugu.github.io/react-minting-template/)
 
